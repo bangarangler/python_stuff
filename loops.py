@@ -31,8 +31,20 @@
   # msg = input('whats the secret password?')
 # print('correct')
 
-num = 1
-while num < 11:
-  print(num)
-  num += 2
+# for spot in range(11):
+  # print('*' * spot)
 
+# times = 1
+# while times < 11:
+  # print('*' * times)
+  # times += 1
+
+# for x in range(3):
+
+for num in range(1,11):
+  count = 1
+  star = ''
+  while count < num:
+    star += '*'
+    count += 1
+  print('star')
