@@ -1,7 +1,7 @@
 from random import randint
 
 computer_guess = randint(1,10)
-player_guess = None
+# player_guess = None
 
 while True:
   player_guess = input("Pick a number from 1 to 10: ")
