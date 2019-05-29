@@ -12,3 +12,11 @@ for color in colors:
 while i < len(colors):
   print(f"{i}: {colors[i]}")
   i += 1
+
+sounds = ['super','cali','fragil','istic','expi','ali','docious']
+
+result = ''
+for s in sounds:
+  result += s.upper()
+# result = result.upper()
+print(result)
