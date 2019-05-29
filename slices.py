@@ -33,3 +33,7 @@ print(colors[5][::-1])
 string = 'This is fun!'
 print(string[::-1])
 
+names = ['James',"Michelle"]
+names[0], names[1] = names[1], names[0]
+print(names)
+
