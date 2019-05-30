@@ -51,3 +51,15 @@ if "phone" in instructor:
   print( 'There is a phone!')
 else:
   print("sorry no phone")
+
+# CLEAR .clear() empties out dictionary
+# COPY .copy() makes a copy of dictionary
+# FROMKEYS {}.fromkeys("a","b") === {'a': 'b'}
+
+new_user = {}.fromkeys(['name', 'score', 'email', 'profile bio'], 'unknown')
+print(new_user)
+
+# GET retrieves a key in an object and return None
+print(instructor.get('name'))
+print(cat.get('phone'))
+
