@@ -43,3 +43,5 @@ print(string_list)
 
 colors = ['red','orange','yellow','green','blue','indigo','violet']
 print([color.upper() for color in colors])
+
+
