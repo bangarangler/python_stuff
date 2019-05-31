@@ -63,3 +63,7 @@ print(new_user)
 print(instructor.get('name'))
 print(cat.get('phone'))
 
+#POP takes single argument of the key and removes the key-value pair
+#POPITEM removes random key value pair
+#UPDATE first = dict(a=1, b=2) second = {} first.update(second)
+
