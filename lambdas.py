@@ -39,3 +39,14 @@ print(list(a_names))
 names = ['Lassie','Colt','Grump']
 print(list(map(lambda name: f"Your instructor is {name}", filter(lambda value: len(value) < 5, names))))
 print([f"Your instructor is {name}" for name in names if len(name) < 5])
+
+def remove_negatives(nums):
+  return list(filter(lambda l: l >= 0, nums))
+
+#BUILT-IN FUNCTIONS
+# all return True if all elements of iterable are truthy
+ppl = ['Charlie','Cody','Carly','Cristina', 'Casey']
+print(all([name[0]=='C' for name in ppl]))
+
+#any return true if any element of iterable is truthy
+print(any([name[0]]=='Z' for name in ppl))
