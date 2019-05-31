@@ -35,3 +35,7 @@ print(evens)
 names = ['abby','autumn','arthur','brady']
 a_names = filter(lambda n: n[0]=='a', names)
 print(list(a_names))
+
+names = ['Lassie','Colt','Grump']
+print(list(map(lambda name: f"Your instructor is {name}", filter(lambda value: len(value) < 5, names))))
+print([f"Your instructor is {name}" for name in names if len(name) < 5])
