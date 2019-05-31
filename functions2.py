@@ -26,3 +26,22 @@ def special_greeting(**kwargs):
 print(special_greeting(Matt="Hello"))
 print(special_greeting(Linz="Hello"))
 print(special_greeting(Matt="special"))
+
+def combine_words(word, **kwargs):
+  if 'prefix' in kwargs:
+    return kwargs['prefix'] + word
+  elif 'suffix' in kwargs:
+    return word + kwargs['suffix']
+  return word
+
+def display_names(first, second):
+  print(f"{first} says hello to {second}")
+names = {"first": "Jon", "second": "Linz"}
+
+display_names(**names)
+
+def add_and_multiply_numbers(a,b,c):
+  print(a + b * c)
+data = dict(a=1,b=2,c=3)
+
+add_and_multiply_numbers(**data)
