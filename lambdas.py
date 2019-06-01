@@ -50,3 +50,41 @@ print(all([name[0]=='C' for name in ppl]))
 
 #any return true if any element of iterable is truthy
 print(any([name[0]]=='Z' for name in ppl))
+
+#using Generator Expression
+def is_all_strings(lst):
+  return all(type(l) == str for l in lst)
+
+#Using a List Comprehension
+def is_all_strings(lst):
+  return all([type(l) == str for l in lst])
+
+#sorted
+more_numbers = [6,1,8,2]
+print(sorted(more_numbers))
+print(sorted(more_numbers, reverse=True))
+
+#max and min return largest or smallest item in iterable
+print(max(3,67,99))
+print(max('a','b','c'))
+print(min(3,67,99))
+print(min('a','b','c'))
+
+new_names = ['Arya',"Samson", "Dora", "Tim", "Ollivander"]
+print(min(new_names))
+print(len(name) for name in new_names)
+print(max(new_names, key=lambda n: len(n)))
+
+def extremes(nums):
+  return (min(nums), max(nums))
+
+#reversed return a reverse iterator
+nuns = [1,2,3,4]
+nuns.reverse()
+reversed(nuns)
+reversed('hello')
+for char in reversed('hello world'):
+  print(char)
+
+for x in reversed(range(0,10)):
+  print(x)
