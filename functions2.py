@@ -45,3 +45,10 @@ def add_and_multiply_numbers(a,b,c):
 data = dict(a=1,b=2,c=3)
 
 add_and_multiply_numbers(**data)
+
+#abs return absolute value of a number
+import math
+print(abs(-5))
+
+#sum takes iterable and optional start returns sum plus the start
+print(sum([1,2,3], 10))
