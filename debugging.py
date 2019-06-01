@@ -15,4 +15,13 @@ def add_numbers(a,b,c,d):
   return a + b + c + d
 add_numbers(1,2,3,4)
 
+def divide(a,b):
+  try:
+    total = a / b
+  except TypeError:
+    return "Please provide two integers or floats"
+  except ZeroDivisionError:
+    return 'Please do not divide by zero'
+  return total
+
 
