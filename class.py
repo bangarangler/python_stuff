@@ -5,11 +5,15 @@
 
 
 class User:
+
+  active_users = 0
+
   def __init__(self, first_name, last_name, email, age):
     self.first_name = first_name
     self.last_name = last_name
     self.email = email
     self.age = age
+    User.active_users += 1
 
   # INSTANCE METHOD
   def full_name(self):
@@ -28,8 +32,9 @@ class User:
     self.age += 1
     return f"Happy {self.age}th, {self.first_name}"
 
-
-
+  def logout(self):
+    User.active_users -= 1
+    return f"{self.first_name} has logged out"
 user1 = User("jon","dain","jon@test.com",31)
 user2 = User('joe',"murph","joe@example.com",65)
 # print(user1.first_name, user1.last_name)
@@ -43,5 +48,8 @@ print(user2.likes("hibachi"))
 print(user2.is_senior())
 print(user1.birthday())
 print(user1.age)
+print(User.active_users)
+print(user2.logout())
+print(User.active_users)
 
 
