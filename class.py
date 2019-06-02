@@ -5,14 +5,22 @@
 
 
 class User:
-
   active_users = 0
+
+  @classmethod
+  def display_active_users(cls):
+    return f"There are currently {cls.active_users} active users"
+
+  @classmethod
+  def from_string(cls, data_str):
+    first, last, email, age = data_str.split(",")
+    return cls(first, last, email, int(age))
 
   def __init__(self, first_name, last_name, email, age):
     self.first_name = first_name
     self.last_name = last_name
     self.email = email
-    self.age = age
+    self.age = int(age)
     User.active_users += 1
 
   # INSTANCE METHOD
@@ -51,5 +59,8 @@ print(user1.age)
 print(User.active_users)
 print(user2.logout())
 print(User.active_users)
-
-
+print(User.display_active_users())
+tom = User.from_string('Tom,Jones,tom@example.com,77')
+print(tom.first_name, tom.email)
+print(tom.full_name())
+print(tom.birthday())
