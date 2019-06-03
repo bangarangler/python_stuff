@@ -40,6 +40,9 @@ class User:
     self.age += 1
     return f"Happy {self.age}th, {self.first_name}"
 
+  def __repr__(self):
+    return f"{self.first_name} is {self.age}"
+
   def logout(self):
     User.active_users -= 1
     return f"{self.first_name} has logged out"
@@ -64,3 +67,7 @@ tom = User.from_string('Tom,Jones,tom@example.com,77')
 print(tom.first_name, tom.email)
 print(tom.full_name())
 print(tom.birthday())
+
+j = User("judy","steele",'judy@test.com',18)
+j = str(j)
+print(j)
