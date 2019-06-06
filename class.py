@@ -71,3 +71,26 @@ print(tom.birthday())
 j = User("judy","steele",'judy@test.com',18)
 j = str(j)
 print(j)
+
+class Moderator(User):
+  total_mods = 0
+
+  def __init__(self,first_name,last_name,email,age,community):
+    super().__init__(first_name,last_name,email,age)
+    self.community = community
+    Moderator.total_mods += 1
+
+  @classmethod
+  def display_active_mods(cls):
+    return f"There are currently {cls.total_mods} active mods"
+
+  def remove_post(self):
+    return f"{self.full_name()} removed a post from the {self.community} community"
+
+jasmine = Moderator("Jasmine", "O'conner", 'jasmine@test.com', 61, "Piano")
+u1 = User("Tom","Garcia","tom@example.com",33)
+print(u1)
+print(jasmine.full_name())
+print(jasmine.community)
+print(User.display_active_users())
+print(Moderator.display_active_mods())
