@@ -42,3 +42,11 @@ def fib_gen(max):
 
 for n in fib_gen(10):
   print(n)
+
+# GENERATOR EXPRESSIONS
+def nums():
+  for num in range(1,10):
+    yield num
+
+#same thing as above
+g = (num for num in range(1,10))
