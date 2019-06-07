@@ -48,3 +48,33 @@ print(laugh_at())
 print(laugh_at())
 print(laugh_at())
 print(laugh_at())
+
+'''
+decorator is a function that wrap other functions and enhance their behavior.
+have their own syntax using @ syntax suger
+'''
+def be_polite(fn):
+  def wrapper():
+    print("what a pleasure to meet you")
+    fn()
+    print('have a great day')
+  return wrapper
+
+@be_polite
+def greet():
+  print("my name is jon")
+
+greet = be_polite(greet)
+print(greet())
+print(greet())
+print(greet())
+
+@be_polite
+def rage():
+  print('i hate you')
+
+# polite_rage = be_polite(rage)
+# print(polite_rage())
+
+print(greet())
+print(rage())
