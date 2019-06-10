@@ -8,7 +8,7 @@ header = colored(header, color="blue")
 print(header)
 
 while True:
-    user_input = input("What would you like to search for? ")
+    user_input = input("What would you like to search for? q or quit to exit  ")
     if user_input == "q" or user_input == "quit":
       break
     else:
