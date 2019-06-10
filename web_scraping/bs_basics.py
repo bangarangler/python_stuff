@@ -30,5 +30,19 @@ soup = BeautifulSoup(html, "html.parser")
 # print(d)
 # d = soup.find(id="first")
 # d = soup.find_all(class_="special")
-d = soup.find_all(attrs={"data-example": "yes"})
-print(d)
+# d = soup.find_all(attrs={"data-example": "yes"})
+# d = soup.select("#first")[0]
+# d = soup.select(".special")
+# d = soup.select("[data-example]")
+el = soup.select(".special")[0]
+# print(el)
+# for el in soup.select(".special"):
+  # print(el.get_text())
+  # print(el.name)
+  # print(el.attrs['class'])
+print(el.get_text())
+
+soup = BeautifulSoup(html, "html.parser")
+
+attr = soup.find("h3")["data-example"]
+print(attr)
